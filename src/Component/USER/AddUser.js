@@ -49,30 +49,30 @@ function AddUser(props) {
         setError(null)
     }
     return (
-        <div>
-            {error &&
-                (<Error
-                    title={error.title}
-                    message={error.message}
-                    onConfirm={errorHandler}
-                ></Error>)}
-            <Card className={style.input}>
-                <form onSubmit={addUserHandler}>
-                    <div>
-                        <label>Username</label>
-                        <input
-                            type="text"
-                            value={enteredUserName}
-                            onChange={userNameHandler}
+    <div>
+        {error &&
+            (<Error
+                title={error.title}
+                message={error.message}
+                onConfirm={errorHandler}
+            ></Error>)}
+        <Card className={style.input}>
+            <form onSubmit={addUserHandler}>
+                <div>
+                    <label>Username</label>
+                    <input
+                        type="text"
+                        value={enteredUserName}
+                        onChange={userNameHandler}
                         />
-                    </div>
-                    <div>
-                        <label>Age(in years)</label>
-                        <input
-                            type="number"
-                            value={enteredAge}
-                            onChange={ageHandler}
-                        />
+                </div>
+                <div>
+                    <label>Age(in years)</label>
+                    <input
+                        type="number"
+                        value={enteredAge}
+                        onChange={ageHandler}
+                    />
                     </div>
                     <div>
                         <Button type="submit">Add User</Button>
